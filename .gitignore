@@ -1,0 +1,49 @@
+# Planning docs are tracked (do not ignore `.planning/`)
+
+# Python bytecode / caches
+__pycache__/
+*.py[cod]
+*.pyd
+*.so
+
+# Test / typecheck caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Package/build artifacts
+*.egg-info/
+dist/
+build/
+
+# Environment files (never commit secrets)
+.env
+.env.*
+!.env.example
+
+# Editor/OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Node (if any tools get added later)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Generated artifacts
+artifacts/
+recordings/
+test-results/
+playwright-report/
