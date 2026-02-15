@@ -1,11 +1,22 @@
 from __future__ import annotations
 
 from io import BytesIO
+from pathlib import Path
 from zipfile import ZipFile
 
 import pytest
+from fastapi.testclient import TestClient
 
+from mod_sentinel.api.main import app
 from mod_sentinel.analysis.jar_extract import inspect_jar_bytes
+from mod_sentinel.settings import reset_settings_cache
+
+
+@pytest.fixture(autouse=True)
+def _reset_settings_between_tests() -> None:
+    reset_settings_cache()
+    yield
+    reset_settings_cache()
 
 
 def _build_jar(entries: dict[str, bytes]) -> bytes:
@@ -37,3 +48,45 @@ def test_inspect_jar_rejects_path_traversal_entry() -> None:
 
     with pytest.raises(ValueError):
         inspect_jar_bytes(jar_bytes)
+
+
+def _configure_local_storage(monkeypatch, tmp_path: Path) -> None:
+    monkeypatch.setenv("STORAGE_BACKEND", "local")
+    monkeypatch.setenv("LOCAL_STORAGE_DIR", str(tmp_path / "uploads"))
+
+
+def _upload_jar(client: TestClient, filename: str, content: bytes) -> str:
+    upload_response = client.post(
+        "/upload",
+        files={"file": (filename, content, "application/java-archive")},
+    )
+    assert upload_response.status_code == 200
+    return upload_response.json()["upload_id"]
+
+
+def test_scan_detects_fabric_loader(monkeypatch, tmp_path: Path) -> None:
+    _configure_local_storage(monkeypatch, tmp_path)
+    client = TestClient(app)
+
+    jar_bytes = _build_jar(
+        {"fabric.mod.json": b"{}", "com/example/Fabric.class": b"class"}
+    )
+    upload_id = _upload_jar(client, "fabric.jar", jar_bytes)
+
+    scan_response = client.post("/scan", json={"upload_id": upload_id})
+    assert scan_response.status_code == 200
+    assert scan_response.json()["intake"]["loader"] == "fabric"
+
+
+def test_scan_detects_forge_loader(monkeypatch, tmp_path: Path) -> None:
+    _configure_local_storage(monkeypatch, tmp_path)
+    client = TestClient(app)
+
+    jar_bytes = _build_jar(
+        {"META-INF/mods.toml": b'modLoader="javafml"', "Demo.class": b"class"}
+    )
+    upload_id = _upload_jar(client, "forge.jar", jar_bytes)
+
+    scan_response = client.post("/scan", json={"upload_id": upload_id})
+    assert scan_response.status_code == 200
+    assert scan_response.json()["intake"]["loader"] == "forge"
