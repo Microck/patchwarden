@@ -78,9 +78,15 @@ class Decompiler:
         class_name = class_name_from_entry(
             class_path.relative_to(classpath_root).as_posix()
         )
-        tokens = _extract_ascii_tokens(class_path.read_bytes())
+        raw_bytes = class_path.read_bytes()
+        raw_preview = raw_bytes.decode("latin-1", errors="ignore")[:2000]
+        tokens = _extract_ascii_tokens(raw_bytes)
         preview = "\n".join(tokens[:80])
-        return f"class {class_name}\n// fallback token extraction\n{preview}".strip()
+        return (
+            f"class {class_name}\n"
+            f"// fallback raw excerpt\n{raw_preview}\n"
+            f"// fallback token extraction\n{preview}"
+        ).strip()
 
     def _try_javap(self, class_path: Path, classpath_root: Path) -> str | None:
         if shutil.which("javap") is None:
