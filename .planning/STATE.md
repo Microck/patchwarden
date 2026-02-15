@@ -2,8 +2,8 @@
 
 ## Current Status
 
-**Current Phase:** 3 - Behavior Analysis (Ready)
-**Next Action:** Execute plan 03-01 (LLM abstraction + behavior agent stub)
+**Current Phase:** 4 - Reputation & Verdict (Ready)
+**Next Action:** Execute plan 04-01 (reputation agent + fixture store)
 
 ---
 
@@ -13,8 +13,8 @@
 |-------|------|--------|----------|
 | 1 | Foundation | Complete | 4/4 requirements |
 | 2 | Static Analysis | Complete | 5/5 requirements |
-| 3 | Behavior Analysis | In Progress | 0/4 requirements |
-| 4 | Reputation & Verdict | Not Started | 0/7 requirements |
+| 3 | Behavior Analysis | Complete | 4/4 requirements |
+| 4 | Reputation & Verdict | In Progress | 0/7 requirements |
 | 5 | Demo | Not Started | 0/4 requirements |
 
 ---
@@ -29,6 +29,9 @@ None currently.
 
 | Date | Activity |
 |------|----------|
+| 2026-02-15 | Completed 03-03 scan behavior integration + snippet selection |
+| 2026-02-15 | Completed 03-02 robust LLM parsing + behavior normalization contract |
+| 2026-02-15 | Completed 03-01 behavior agent + deterministic stub client |
 | 2026-02-15 | Completed 02-04 static agent + scan static payload integration |
 | 2026-02-15 | Completed 02-03 signature corpus + local/azure stores |
 | 2026-02-15 | Completed 02-02 suspicious pattern catalog + matcher |
@@ -42,8 +45,8 @@ None currently.
 
 ## Next Steps
 
-1. Run `03-01-PLAN.md` for stubbed behavior prediction pipeline
-2. Continue with parsing hardening (`03-02`) and scan integration (`03-03`)
+1. Run `04-01-PLAN.md` for reputation fixtures and author scoring
+2. Continue with verdict synthesis (`04-02`) and full scan persistence (`04-03`)
 
 ---
 
