@@ -2,8 +2,8 @@
 
 ## Current Status
 
-**Current Phase:** 4 - Reputation & Verdict (Ready)
-**Next Action:** Execute plan 04-01 (reputation agent + fixture store)
+**Current Phase:** 4 - Reputation & Verdict (In Progress)
+**Next Action:** Execute plan 04-02 (verdict model + scoring)
 
 ---
 
@@ -14,7 +14,7 @@
 | 1 | Foundation | Complete | 4/4 requirements |
 | 2 | Static Analysis | Complete | 5/5 requirements |
 | 3 | Behavior Analysis | Complete | 4/4 requirements |
-| 4 | Reputation & Verdict | In Progress | 0/7 requirements |
+| 4 | Reputation & Verdict | In Progress | 3/7 requirements |
 | 5 | Demo | Not Started | 0/4 requirements |
 
 ---
@@ -29,6 +29,7 @@ None currently.
 
 | Date | Activity |
 |------|----------|
+| 2026-02-15 | Completed 04-01 reputation agent + fixture-backed author scoring |
 | 2026-02-15 | Completed 03-03 scan behavior integration + snippet selection |
 | 2026-02-15 | Completed 03-02 robust LLM parsing + behavior normalization contract |
 | 2026-02-15 | Completed 03-01 behavior agent + deterministic stub client |
@@ -45,8 +46,8 @@ None currently.
 
 ## Next Steps
 
-1. Run `04-01-PLAN.md` for reputation fixtures and author scoring
-2. Continue with verdict synthesis (`04-02`) and full scan persistence (`04-03`)
+1. Run `04-02-PLAN.md` for verdict synthesis rules and indicator explanations
+2. Continue with full scan persistence + retrieval API in `04-03`
 
 ---
 
