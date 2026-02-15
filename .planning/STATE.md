@@ -3,7 +3,7 @@
 ## Current Status
 
 **Current Phase:** 4 - Reputation & Verdict (In Progress)
-**Next Action:** Execute plan 04-02 (verdict model + scoring)
+**Next Action:** Execute plan 04-03 (full scan pipeline + persistence)
 
 ---
 
@@ -14,7 +14,7 @@
 | 1 | Foundation | Complete | 4/4 requirements |
 | 2 | Static Analysis | Complete | 5/5 requirements |
 | 3 | Behavior Analysis | Complete | 4/4 requirements |
-| 4 | Reputation & Verdict | In Progress | 3/7 requirements |
+| 4 | Reputation & Verdict | In Progress | 7/7 requirements |
 | 5 | Demo | Not Started | 0/4 requirements |
 
 ---
@@ -29,6 +29,7 @@ None currently.
 
 | Date | Activity |
 |------|----------|
+| 2026-02-15 | Completed 04-02 verdict agent + deterministic risk synthesis |
 | 2026-02-15 | Completed 04-01 reputation agent + fixture-backed author scoring |
 | 2026-02-15 | Completed 03-03 scan behavior integration + snippet selection |
 | 2026-02-15 | Completed 03-02 robust LLM parsing + behavior normalization contract |
@@ -46,8 +47,8 @@ None currently.
 
 ## Next Steps
 
-1. Run `04-02-PLAN.md` for verdict synthesis rules and indicator explanations
-2. Continue with full scan persistence + retrieval API in `04-03`
+1. Run `04-03-PLAN.md` for scan orchestration + result persistence
+2. Start Phase 5 UI/demo plans after persistent scan API is complete
 
 ---
 
