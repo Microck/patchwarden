@@ -3,6 +3,7 @@ from mod_sentinel.models.intake import IntakeResult
 from mod_sentinel.models.reputation import AuthorMetadata, ReputationResult
 from mod_sentinel.models.scan import ScanRequest, ScanResult
 from mod_sentinel.models.static import StaticFindings, StaticIndicator
+from mod_sentinel.models.verdict import Verdict, VerdictIndicator
 
 __all__ = [
     "BehaviorPrediction",
@@ -13,4 +14,6 @@ __all__ = [
     "ScanResult",
     "StaticFindings",
     "StaticIndicator",
+    "Verdict",
+    "VerdictIndicator",
 ]
