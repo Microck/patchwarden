@@ -2,8 +2,8 @@
 
 ## Current Status
 
-**Current Phase:** 5 - Demo (Ready)
-**Next Action:** Execute plan 05-01 (web UI for upload + verdict display)
+**Current Phase:** 5 - Demo (In Progress)
+**Next Action:** Execute plan 05-02 (synthetic sample + demo runner script)
 
 ---
 
@@ -15,7 +15,7 @@
 | 2 | Static Analysis | Complete | 5/5 requirements |
 | 3 | Behavior Analysis | Complete | 4/4 requirements |
 | 4 | Reputation & Verdict | Complete | 7/7 requirements |
-| 5 | Demo | In Progress | 0/4 requirements |
+| 5 | Demo | In Progress | 1/4 requirements |
 
 ---
 
@@ -29,6 +29,7 @@ None currently.
 
 | Date | Activity |
 |------|----------|
+| 2026-02-15 | Completed 05-01 web UI and FastAPI static serving |
 | 2026-02-15 | Completed 04-03 scan pipeline + persisted scan retrieval API |
 | 2026-02-15 | Completed 04-02 verdict agent + deterministic risk synthesis |
 | 2026-02-15 | Completed 04-01 reputation agent + fixture-backed author scoring |
@@ -48,8 +49,8 @@ None currently.
 
 ## Next Steps
 
-1. Run `05-01-PLAN.md` for web UI upload and verdict rendering
-2. Follow with demo sample tooling (`05-02`) and submission docs (`05-03`)
+1. Run `05-02-PLAN.md` for synthetic suspicious sample + scripted demo runner
+2. Finish docs/storyboard/checklist work in `05-03`
 
 ---
 
