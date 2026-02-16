@@ -283,6 +283,7 @@ async fn scan(
     State(state): State<AppState>,
     Json(request): Json<ScanRequest>,
 ) -> Result<Json<ScanRunResponse>, AppError> {
+    validate_artifact_id(&request.upload_id)?;
     let upload_path = state.uploads_dir.join(format!("{}.jar", request.upload_id));
     if !upload_path.exists() {
         return Err(AppError::not_found("Upload not found"));
@@ -340,9 +341,7 @@ async fn get_scan(
     State(state): State<AppState>,
     AxumPath(scan_id): AxumPath<String>,
 ) -> Result<Json<ScanRunResponse>, AppError> {
-    if scan_id.trim().is_empty() {
-        return Err(AppError::bad_request("scan_id cannot be empty"));
-    }
+    validate_artifact_id(&scan_id)?;
     let path = state.scans_dir.join(format!("{scan_id}.json"));
     if !path.exists() {
         return Err(AppError::not_found("Scan not found"));
@@ -713,4 +712,13 @@ fn load_yara_rules(path: PathBuf) -> Result<Rules> {
         .with_context(|| format!("Failed compiling YARA rules from {}", path.display()))?;
     let rules = compiler.build();
     Ok(rules)
+}
+
+fn validate_artifact_id(value: &str) -> Result<(), AppError> {
+    if value.len() != 32 || !value.chars().all(|ch| ch.is_ascii_hexdigit()) {
+        return Err(AppError::bad_request(
+            "Invalid identifier format (expected 32 hex chars)",
+        ));
+    }
+    Ok(())
 }
