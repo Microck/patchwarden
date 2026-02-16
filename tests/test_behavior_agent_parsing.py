@@ -1,8 +1,8 @@
 from __future__ import annotations
 
-from mod_sentinel.agents.behavior_agent import BehaviorAgent
-from mod_sentinel.llm.client import LLMClient
-from mod_sentinel.models.static import StaticFindings
+from jarspect.agents.behavior_agent import BehaviorAgent
+from jarspect.llm.client import LLMClient
+from jarspect.models.static import StaticFindings
 
 
 class MarkdownStubLLM(LLMClient):

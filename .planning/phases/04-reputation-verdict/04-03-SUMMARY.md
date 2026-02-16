@@ -23,16 +23,16 @@ tech-stack:
 key-files:
   created:
     [
-      "src/mod_sentinel/pipeline/scan_pipeline.py",
-      "src/mod_sentinel/store/scans.py",
-      "src/mod_sentinel/api/routes/scans.py",
+      "src/jarspect/pipeline/scan_pipeline.py",
+      "src/jarspect/store/scans.py",
+      "src/jarspect/api/routes/scans.py",
       "tests/test_scan_full.py",
     ]
   modified:
     [
-      "src/mod_sentinel/models/scan.py",
-      "src/mod_sentinel/api/routes/scan.py",
-      "src/mod_sentinel/api/main.py",
+      "src/jarspect/models/scan.py",
+      "src/jarspect/api/routes/scan.py",
+      "src/jarspect/api/main.py",
       "tests/test_scan_static.py",
       "tests/test_scan_behavior.py",
       "tests/test_intake.py",
@@ -74,13 +74,13 @@ completed: 2026-02-15
 
 ## Files Created/Modified
 
-- `src/mod_sentinel/pipeline/scan_pipeline.py` - orchestrated scan runner with verdict generation.
-- `src/mod_sentinel/store/scans.py` - persisted scan storage and retrieval implementation.
-- `src/mod_sentinel/store/__init__.py` - scan store accessor and cache.
-- `src/mod_sentinel/models/scan.py` - scan response envelope and verdict field.
-- `src/mod_sentinel/api/routes/scan.py` - write path with scan persistence.
-- `src/mod_sentinel/api/routes/scans.py` - read path by scan id.
-- `src/mod_sentinel/api/main.py` - route registration for `/scans/{scan_id}`.
+- `src/jarspect/pipeline/scan_pipeline.py` - orchestrated scan runner with verdict generation.
+- `src/jarspect/store/scans.py` - persisted scan storage and retrieval implementation.
+- `src/jarspect/store/__init__.py` - scan store accessor and cache.
+- `src/jarspect/models/scan.py` - scan response envelope and verdict field.
+- `src/jarspect/api/routes/scan.py` - write path with scan persistence.
+- `src/jarspect/api/routes/scans.py` - read path by scan id.
+- `src/jarspect/api/main.py` - route registration for `/scans/{scan_id}`.
 - `tests/test_scan_full.py` - upload -> scan -> get-by-id integration coverage.
 
 ## Decisions Made

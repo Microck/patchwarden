@@ -3,7 +3,7 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "mod-sentinel"
+name = "jarspect"
 version = "0.1.0"
 description = "Multi-agent security scanner for game mods"
 requires-python = ">=3.11"

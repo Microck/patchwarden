@@ -1,7 +1,7 @@
 from __future__ import annotations
 
-from mod_sentinel.analysis.patterns import PATTERNS
-from mod_sentinel.analysis.static_scan import scan_sources_for_patterns
+from jarspect.analysis.patterns import PATTERNS
+from jarspect.analysis.static_scan import scan_sources_for_patterns
 
 
 def test_pattern_catalog_has_minimum_rules() -> None:

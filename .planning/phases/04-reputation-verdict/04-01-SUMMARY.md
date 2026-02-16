@@ -17,14 +17,14 @@ tech-stack:
 key-files:
   created:
     [
-      "src/mod_sentinel/agents/reputation_agent.py",
-      "src/mod_sentinel/store/reputation_fixtures.py",
-      "src/mod_sentinel/fixtures/reputation/author_history.json",
-      "src/mod_sentinel/fixtures/reputation/community_reports.json",
-      "src/mod_sentinel/models/reputation.py",
+      "src/jarspect/agents/reputation_agent.py",
+      "src/jarspect/store/reputation_fixtures.py",
+      "src/jarspect/fixtures/reputation/author_history.json",
+      "src/jarspect/fixtures/reputation/community_reports.json",
+      "src/jarspect/models/reputation.py",
       "tests/test_reputation.py",
     ]
-  modified: ["src/mod_sentinel/api/routes/scan.py", "src/mod_sentinel/models/scan.py"]
+  modified: ["src/jarspect/api/routes/scan.py", "src/jarspect/models/scan.py"]
 key-decisions:
   - "Prefer local fixture values over request metadata whenever fixture data exists for reproducible demos."
   - "Use a transparent weighted heuristic (age/mod history/reports) to keep score behavior explainable."
@@ -50,7 +50,7 @@ completed: 2026-02-15
 ## Accomplishments
 
 - Added `ReputationAgent` plus file-backed fixture store for author history and community report signals (REP-01, REP-02).
-- Added local fixture corpus under `src/mod_sentinel/fixtures/reputation/` for deterministic MVP demos.
+- Added local fixture corpus under `src/jarspect/fixtures/reputation/` for deterministic MVP demos.
 - Extended `/scan` request/response models to support optional `author` metadata and `reputation` results.
 - Added tests for fixture precedence, metadata fallback, deterministic scoring, and API-level reputation inclusion.
 
@@ -61,13 +61,13 @@ completed: 2026-02-15
 
 ## Files Created/Modified
 
-- `src/mod_sentinel/agents/reputation_agent.py` - deterministic reputation scoring with rationale output.
-- `src/mod_sentinel/store/reputation_fixtures.py` - local JSON fixture loader and report lookup helpers.
-- `src/mod_sentinel/fixtures/reputation/author_history.json` - author history fixture dataset.
-- `src/mod_sentinel/fixtures/reputation/community_reports.json` - community report fixture dataset.
-- `src/mod_sentinel/models/reputation.py` - author input and reputation result models.
-- `src/mod_sentinel/models/scan.py` - optional author input and reputation output fields.
-- `src/mod_sentinel/api/routes/scan.py` - optional reputation stage in scan orchestration.
+- `src/jarspect/agents/reputation_agent.py` - deterministic reputation scoring with rationale output.
+- `src/jarspect/store/reputation_fixtures.py` - local JSON fixture loader and report lookup helpers.
+- `src/jarspect/fixtures/reputation/author_history.json` - author history fixture dataset.
+- `src/jarspect/fixtures/reputation/community_reports.json` - community report fixture dataset.
+- `src/jarspect/models/reputation.py` - author input and reputation result models.
+- `src/jarspect/models/scan.py` - optional author input and reputation output fields.
+- `src/jarspect/api/routes/scan.py` - optional reputation stage in scan orchestration.
 - `tests/test_reputation.py` - unit + API coverage for reputation behavior.
 
 ## Decisions Made

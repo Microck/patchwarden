@@ -19,10 +19,10 @@ tech-stack:
 key-files:
   created:
     [
-      "src/mod_sentinel/pipeline/snippet_select.py",
+      "src/jarspect/pipeline/snippet_select.py",
       "tests/test_scan_behavior.py",
     ]
-  modified: ["src/mod_sentinel/api/routes/scan.py", "src/mod_sentinel/models/scan.py"]
+  modified: ["src/jarspect/api/routes/scan.py", "src/jarspect/models/scan.py"]
 key-decisions:
   - "Prioritize snippet selection by static severity to keep prompts focused and bounded."
   - "Include behavior in core scan payload rather than a separate endpoint for MVP speed."
@@ -58,9 +58,9 @@ completed: 2026-02-15
 
 ## Files Created/Modified
 
-- `src/mod_sentinel/pipeline/snippet_select.py` - prompt context selection and truncation logic
-- `src/mod_sentinel/models/scan.py` - scan response now includes behavior prediction
-- `src/mod_sentinel/api/routes/scan.py` - behavior orchestration in scan flow
+- `src/jarspect/pipeline/snippet_select.py` - prompt context selection and truncation logic
+- `src/jarspect/models/scan.py` - scan response now includes behavior prediction
+- `src/jarspect/api/routes/scan.py` - behavior orchestration in scan flow
 - `tests/test_scan_behavior.py` - API-level behavior inclusion test
 
 ## Decisions Made

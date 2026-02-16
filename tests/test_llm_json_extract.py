@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from mod_sentinel.llm.json_extract import extract_first_json_object
+from jarspect.llm.json_extract import extract_first_json_object
 
 
 def test_extract_pure_json() -> None:

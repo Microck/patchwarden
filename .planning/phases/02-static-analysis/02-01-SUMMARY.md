@@ -17,13 +17,13 @@ tech-stack:
 key-files:
   created:
     [
-      "src/mod_sentinel/analysis/jar_classes.py",
-      "src/mod_sentinel/analysis/tempdirs.py",
-      "src/mod_sentinel/analysis/decompiler.py",
+      "src/jarspect/analysis/jar_classes.py",
+      "src/jarspect/analysis/tempdirs.py",
+      "src/jarspect/analysis/decompiler.py",
       "tests/test_jar_classes.py",
       "tests/test_decompiler.py",
     ]
-  modified: ["src/mod_sentinel/analysis/__init__.py"]
+  modified: ["src/jarspect/analysis/__init__.py"]
 key-decisions:
   - "Do not auto-download decompiler binaries; rely on env-provided CFR path when available."
   - "Fallback path prioritizes `javap` then token extraction so local scans always produce text."
@@ -59,9 +59,9 @@ completed: 2026-02-15
 
 ## Files Created/Modified
 
-- `src/mod_sentinel/analysis/jar_classes.py` - class discovery, extraction, and class-name helpers
-- `src/mod_sentinel/analysis/tempdirs.py` - managed temp directory context manager
-- `src/mod_sentinel/analysis/decompiler.py` - CFR/javap/token fallback decompilation wrapper
+- `src/jarspect/analysis/jar_classes.py` - class discovery, extraction, and class-name helpers
+- `src/jarspect/analysis/tempdirs.py` - managed temp directory context manager
+- `src/jarspect/analysis/decompiler.py` - CFR/javap/token fallback decompilation wrapper
 - `tests/test_jar_classes.py` - synthetic jar extraction checks
 - `tests/test_decompiler.py` - fallback output checks for class + method tokens
 

@@ -24,7 +24,7 @@ key-files:
   created:
     [
       "demo/samples/suspicious_mod_src/README.md",
-      "demo/samples/suspicious_mod_src/src/main/java/com/modsentinel/demo/DemoMod.java",
+      "demo/samples/suspicious_mod_src/src/main/java/com/jarspect/demo/DemoMod.java",
       "demo/build_sample.sh",
       "scripts/demo_run.sh",
     ]
@@ -41,7 +41,7 @@ completed: 2026-02-15
 
 # Phase 5 Plan 2: Synthetic Sample and Demo Script Summary
 
-**Added a safe synthetic suspicious sample plus a single-command demo runner that prints PatchWarden verdicts and top indicators end-to-end.**
+**Added a safe synthetic suspicious sample plus a single-command demo runner that prints Jarspect verdicts and top indicators end-to-end.**
 
 ## Performance
 
@@ -66,7 +66,7 @@ completed: 2026-02-15
 ## Files Created/Modified
 
 - `demo/samples/suspicious_mod_src/README.md` - explicit safety and usage documentation for synthetic fixture.
-- `demo/samples/suspicious_mod_src/src/main/java/com/modsentinel/demo/DemoMod.java` - safe sample with suspicious-looking dead-code markers.
+- `demo/samples/suspicious_mod_src/src/main/java/com/jarspect/demo/DemoMod.java` - safe sample with suspicious-looking dead-code markers.
 - `demo/build_sample.sh` - deterministic local sample jar builder.
 - `scripts/demo_run.sh` - build/upload/scan/retrieve/print automation script.
 - `.gitignore` - ignores generated demo/runtime artifacts.

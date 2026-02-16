@@ -8,9 +8,9 @@ from zipfile import ZipFile
 import pytest
 from fastapi.testclient import TestClient
 
-from mod_sentinel.api.main import app
-from mod_sentinel.analysis.jar_extract import inspect_jar_bytes
-from mod_sentinel.settings import reset_settings_cache
+from jarspect.api.main import app
+from jarspect.analysis.jar_extract import inspect_jar_bytes
+from jarspect.settings import reset_settings_cache
 
 
 @pytest.fixture(autouse=True)

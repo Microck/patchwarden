@@ -2,16 +2,16 @@ from __future__ import annotations
 
 import pytest
 
-from mod_sentinel.agents.verdict_agent import VerdictAgent, tier_for_score
-from mod_sentinel.models.behavior import (
+from jarspect.agents.verdict_agent import VerdictAgent, tier_for_score
+from jarspect.models.behavior import (
     BehaviorPrediction,
     FileSystemPrediction,
     NetworkPrediction,
     PersistencePrediction,
 )
-from mod_sentinel.models.intake import IntakeResult
-from mod_sentinel.models.reputation import ReputationResult
-from mod_sentinel.models.static import StaticFindings, StaticIndicator
+from jarspect.models.intake import IntakeResult
+from jarspect.models.reputation import ReputationResult
+from jarspect.models.static import StaticFindings, StaticIndicator
 
 
 def _intake(upload_id: str = "upload-123") -> IntakeResult:

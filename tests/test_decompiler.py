@@ -3,7 +3,7 @@ from __future__ import annotations
 from io import BytesIO
 from zipfile import ZipFile
 
-from mod_sentinel.analysis.decompiler import Decompiler
+from jarspect.analysis.decompiler import Decompiler
 
 
 def _build_class_jar() -> bytes:

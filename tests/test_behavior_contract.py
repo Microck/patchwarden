@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from mod_sentinel.llm.behavior_contract import normalize_behavior_payload
+from jarspect.llm.behavior_contract import normalize_behavior_payload
 
 
 def test_behavior_contract_normalizes_partial_payload() -> None:

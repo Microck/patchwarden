@@ -17,13 +17,13 @@ tech-stack:
 key-files:
   created:
     [
-      "src/mod_sentinel/llm/json_extract.py",
-      "src/mod_sentinel/llm/behavior_contract.py",
+      "src/jarspect/llm/json_extract.py",
+      "src/jarspect/llm/behavior_contract.py",
       "tests/test_llm_json_extract.py",
       "tests/test_behavior_contract.py",
       "tests/test_behavior_agent_parsing.py",
     ]
-  modified: ["src/mod_sentinel/agents/behavior_agent.py", "src/mod_sentinel/llm/__init__.py"]
+  modified: ["src/jarspect/agents/behavior_agent.py", "src/jarspect/llm/__init__.py"]
 key-decisions:
   - "Parse raw text first; never trust provider to return strict JSON only."
   - "Use confidence=0 unknown fallbacks instead of raising parse exceptions in behavior stage."
@@ -60,9 +60,9 @@ completed: 2026-02-15
 
 ## Files Created/Modified
 
-- `src/mod_sentinel/llm/json_extract.py` - extraction logic with fenced-json priority
-- `src/mod_sentinel/llm/behavior_contract.py` - normalization contract and coercion helpers
-- `src/mod_sentinel/agents/behavior_agent.py` - untrusted text parsing pipeline
+- `src/jarspect/llm/json_extract.py` - extraction logic with fenced-json priority
+- `src/jarspect/llm/behavior_contract.py` - normalization contract and coercion helpers
+- `src/jarspect/agents/behavior_agent.py` - untrusted text parsing pipeline
 - `tests/test_llm_json_extract.py` - extraction format coverage
 - `tests/test_behavior_contract.py` - normalization/degradation coverage
 - `tests/test_behavior_agent_parsing.py` - markdown-wrapped JSON integration test

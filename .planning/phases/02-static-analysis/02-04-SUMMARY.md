@@ -19,16 +19,16 @@ tech-stack:
 key-files:
   created:
     [
-      "src/mod_sentinel/agents/static_agent.py",
-      "src/mod_sentinel/models/scan.py",
+      "src/jarspect/agents/static_agent.py",
+      "src/jarspect/models/scan.py",
       "tests/test_scan_static.py",
     ]
   modified:
     [
-      "src/mod_sentinel/api/routes/scan.py",
-      "src/mod_sentinel/models/__init__.py",
-      "src/mod_sentinel/analysis/decompiler.py",
-      "src/mod_sentinel/agents/__init__.py",
+      "src/jarspect/api/routes/scan.py",
+      "src/jarspect/models/__init__.py",
+      "src/jarspect/analysis/decompiler.py",
+      "src/jarspect/agents/__init__.py",
     ]
 key-decisions:
   - "Return static findings directly from `/scan` to keep API deterministic and demo-friendly."
@@ -65,11 +65,11 @@ completed: 2026-02-15
 
 ## Files Created/Modified
 
-- `src/mod_sentinel/agents/static_agent.py` - static scan orchestration and merged findings
-- `src/mod_sentinel/models/scan.py` - scan request/result models
-- `src/mod_sentinel/api/routes/scan.py` - intake + static endpoint behavior
+- `src/jarspect/agents/static_agent.py` - static scan orchestration and merged findings
+- `src/jarspect/models/scan.py` - scan request/result models
+- `src/jarspect/api/routes/scan.py` - intake + static endpoint behavior
 - `tests/test_scan_static.py` - end-to-end static detection assertion
-- `src/mod_sentinel/analysis/decompiler.py` - fallback output enhancement for regex matching reliability
+- `src/jarspect/analysis/decompiler.py` - fallback output enhancement for regex matching reliability
 
 ## Decisions Made
 
@@ -84,7 +84,7 @@ completed: 2026-02-15
 - **Found during:** Task 2
 - **Issue:** Pattern regexes like `java.net.URLConnection` did not match token-only fallback text.
 - **Fix:** Included a bounded raw-byte excerpt in fallback decompile output in addition to token extraction.
-- **Files modified:** `src/mod_sentinel/analysis/decompiler.py`
+- **Files modified:** `src/jarspect/analysis/decompiler.py`
 - **Verification:** `python3 -m pytest -q` with `tests/test_scan_static.py` detection assertions
 - **Committed in:** `860196f`
 

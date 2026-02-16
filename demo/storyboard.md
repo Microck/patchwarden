@@ -1,13 +1,13 @@
-# PatchWarden 2-Minute Demo Storyboard
+# Jarspect 2-Minute Demo Storyboard
 
 ## Total Runtime: ~2:00
 
 ## 0:00 - 0:20 | Problem + Product
 
-- Show the PatchWarden UI at `http://localhost:8000/`.
+- Show the Jarspect UI at `http://localhost:8000/`.
 - Narration:
   - "Gamers install mods from many sources and cannot inspect every jar manually."
-  - "PatchWarden runs layered analysis and produces a clear risk verdict."
+  - "Jarspect runs layered analysis and produces a clear risk verdict."
 
 ## 0:20 - 0:45 | Trigger the Scan
 
@@ -29,7 +29,7 @@
 
 - Highlight final `risk_tier`, `risk_score`, and indicator list in UI.
 - Narration:
-  - "PatchWarden does not just score risk; it explains exactly why."
+  - "Jarspect does not just score risk; it explains exactly why."
   - "This helps users make informed install decisions quickly."
 
 ## 1:45 - 2:00 | Close
@@ -37,4 +37,4 @@
 - Show persisted scan retrieval by `scan_id` (`GET /scans/{scan_id}`).
 - Narration:
   - "Results are stored for later review, sharing, and moderation workflows."
-  - "PatchWarden delivers actionable safety signals in minutes."
+  - "Jarspect delivers actionable safety signals in minutes."

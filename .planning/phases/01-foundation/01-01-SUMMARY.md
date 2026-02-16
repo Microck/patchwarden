@@ -13,14 +13,14 @@ tech-stack:
   added: []
   patterns: ["FastAPI app factory", "cached settings accessor"]
 key-files:
-  created: ["mod_sentinel/__init__.py"]
+  created: ["jarspect/__init__.py"]
   modified:
     [
-      "src/mod_sentinel/__init__.py",
-      "src/mod_sentinel/settings.py",
-      "src/mod_sentinel/api/main.py",
-      "src/mod_sentinel/api/__init__.py",
-      "src/mod_sentinel/api/routes/__init__.py",
+      "src/jarspect/__init__.py",
+      "src/jarspect/settings.py",
+      "src/jarspect/api/main.py",
+      "src/jarspect/api/__init__.py",
+      "src/jarspect/api/routes/__init__.py",
     ]
 key-decisions:
   - "Use get_settings() cache to centralize env parsing for later phases."
@@ -48,7 +48,7 @@ completed: 2026-02-15
 
 - Expanded `Settings` to include storage, search, decompiler, and LLM env-gated defaults.
 - Standardized API bootstrap with `create_app()` and explicit package exports.
-- Preserved `python3` local workflow with src-layout import shim for `mod_sentinel`.
+- Preserved `python3` local workflow with src-layout import shim for `jarspect`.
 
 ## Task Commits
 
@@ -57,11 +57,11 @@ completed: 2026-02-15
 
 ## Files Created/Modified
 
-- `mod_sentinel/__init__.py` - local src-layout import shim for `python3` commands
-- `src/mod_sentinel/settings.py` - typed env settings plus cached accessor/reset helper
-- `src/mod_sentinel/api/main.py` - app factory with settings-driven title/version
-- `src/mod_sentinel/api/__init__.py` - API exports
-- `src/mod_sentinel/api/routes/__init__.py` - route exports
+- `jarspect/__init__.py` - local src-layout import shim for `python3` commands
+- `src/jarspect/settings.py` - typed env settings plus cached accessor/reset helper
+- `src/jarspect/api/main.py` - app factory with settings-driven title/version
+- `src/jarspect/api/__init__.py` - API exports
+- `src/jarspect/api/routes/__init__.py` - route exports
 
 ## Decisions Made
 
@@ -74,10 +74,10 @@ completed: 2026-02-15
 
 **1. [Rule 3 - Blocking] Fixed src-layout import failures for verify commands**
 - **Found during:** Task 1
-- **Issue:** `python3 -c "import mod_sentinel"` failed because package lives under `src/`.
-- **Fix:** Added `mod_sentinel/__init__.py` shim that points imports to `src/mod_sentinel`.
-- **Files modified:** `mod_sentinel/__init__.py`
-- **Verification:** `python3 -c "import mod_sentinel; print('ok')"`
+- **Issue:** `python3 -c "import jarspect"` failed because package lives under `src/`.
+- **Fix:** Added `jarspect/__init__.py` shim that points imports to `src/jarspect`.
+- **Files modified:** `jarspect/__init__.py`
+- **Verification:** `python3 -c "import jarspect; print('ok')"`
 - **Committed in:** `6e0eb5d`
 
 ---
@@ -100,7 +100,7 @@ None - no external service configuration required.
 
 ## Self-Check: PASSED
 
-- `mod_sentinel/__init__.py` exists.
+- `jarspect/__init__.py` exists.
 - Commit `6e0eb5d` exists in git log.
 - Commit `c9ee130` exists in git log.
 

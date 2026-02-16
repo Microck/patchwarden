@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from mod_sentinel.signatures.local_json import LocalJsonSignatureStore
+from jarspect.signatures.local_json import LocalJsonSignatureStore
 
 
 def test_signature_store_finds_known_token() -> None:

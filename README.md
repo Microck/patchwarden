@@ -1,6 +1,6 @@
-# PatchWarden
+# Jarspect
 
-PatchWarden is a multi-agent security scanner for Minecraft mods (`.jar`) that
+Jarspect is a multi-agent security scanner for Minecraft mods (`.jar`) that
 helps players and communities detect suspicious behavior before installation.
 
 It combines deterministic static analysis, behavior prediction, author
@@ -41,7 +41,7 @@ pip install -e .
 Run the API + web UI:
 
 ```bash
-python3 -m uvicorn mod_sentinel.api.main:app --reload
+python3 -m uvicorn jarspect.api.main:app --reload
 ```
 
 Open:
@@ -80,7 +80,7 @@ top_indicators:
 
 ## Safety Note
 
-PatchWarden includes **synthetic demo fixtures only**.
+Jarspect includes **synthetic demo fixtures only**.
 
 - `demo/samples/suspicious_mod_src/` is intentionally benign source code.
 - `demo/suspicious_sample.jar` is generated locally for demonstrations.

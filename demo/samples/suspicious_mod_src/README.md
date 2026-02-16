@@ -1,6 +1,6 @@
 # Synthetic Suspicious Demo Fixture
 
-This folder contains a **safe, synthetic** Java sample used for PatchWarden demos.
+This folder contains a **safe, synthetic** Java sample used for Jarspect demos.
 
 ## Safety guarantees
 

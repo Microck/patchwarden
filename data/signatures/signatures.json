@@ -37,7 +37,7 @@
   {
     "id": "SIG-TOKEN-EXAMPLE-C2",
     "kind": "token",
-    "value": "c2.modsentinel.example.invalid",
+    "value": "c2.jarspect.example.invalid",
     "severity": "high",
     "description": "Synthetic command-and-control domain for safe demo matching."
   }

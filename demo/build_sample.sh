@@ -3,7 +3,7 @@ set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 DEMO_DIR="${ROOT_DIR}/demo"
-SOURCE_FILE="${DEMO_DIR}/samples/suspicious_mod_src/src/main/java/com/modsentinel/demo/DemoMod.java"
+SOURCE_FILE="${DEMO_DIR}/samples/suspicious_mod_src/src/main/java/com/jarspect/demo/DemoMod.java"
 OUTPUT_JAR="${DEMO_DIR}/suspicious_sample.jar"
 BUILD_DIR="${DEMO_DIR}/.build"
 
@@ -32,11 +32,11 @@ output_jar = Path(os.environ["OUTPUT_JAR_PATH"])
 source_text = source_path.read_text(encoding="utf-8")
 
 class_blob = b"\xca\xfe\xba\xbe" + source_text.encode("utf-8")
-manifest = "Manifest-Version: 1.0\nCreated-By: PatchWarden Demo\n\n"
+manifest = "Manifest-Version: 1.0\nCreated-By: Jarspect Demo\n\n"
 
 with ZipFile(output_jar, "w", compression=ZIP_DEFLATED) as archive:
     archive.writestr("META-INF/MANIFEST.MF", manifest)
-    archive.writestr("com/modsentinel/demo/DemoMod.class", class_blob)
+    archive.writestr("com/jarspect/demo/DemoMod.class", class_blob)
 PY
 fi
 

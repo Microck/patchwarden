@@ -21,12 +21,12 @@ tech-stack:
 key-files:
   created:
     [
-      "src/mod_sentinel/ui/index.html",
-      "src/mod_sentinel/ui/app.js",
-      "src/mod_sentinel/ui/styles.css",
-      "src/mod_sentinel/api/routes/ui.py",
+      "src/jarspect/ui/index.html",
+      "src/jarspect/ui/app.js",
+      "src/jarspect/ui/styles.css",
+      "src/jarspect/api/routes/ui.py",
     ]
-  modified: ["src/mod_sentinel/api/main.py", "src/mod_sentinel/api/routes/__init__.py"]
+  modified: ["src/jarspect/api/main.py", "src/jarspect/api/routes/__init__.py"]
 key-decisions:
   - "Serve static UI directly from FastAPI for demo simplicity and no CORS complexity."
   - "Expose author metadata controls in UI so demo runs can highlight reputation impacts."
@@ -39,7 +39,7 @@ completed: 2026-02-15
 
 # Phase 5 Plan 1: Demo UI Summary
 
-**Built and served a lightweight web UI that runs the full PatchWarden flow from browser upload through verdict indicator rendering.**
+**Built and served a lightweight web UI that runs the full Jarspect flow from browser upload through verdict indicator rendering.**
 
 ## Performance
 
@@ -62,12 +62,12 @@ completed: 2026-02-15
 
 ## Files Created/Modified
 
-- `src/mod_sentinel/ui/index.html` - upload, metadata form, and verdict display markup.
-- `src/mod_sentinel/ui/app.js` - browser orchestration of upload/scan requests and result rendering.
-- `src/mod_sentinel/ui/styles.css` - visual system and responsive styling for demo readability.
-- `src/mod_sentinel/api/routes/ui.py` - root index route + static asset app.
-- `src/mod_sentinel/api/main.py` - UI route registration and `/static` mount.
-- `src/mod_sentinel/api/routes/__init__.py` - route exports include UI router.
+- `src/jarspect/ui/index.html` - upload, metadata form, and verdict display markup.
+- `src/jarspect/ui/app.js` - browser orchestration of upload/scan requests and result rendering.
+- `src/jarspect/ui/styles.css` - visual system and responsive styling for demo readability.
+- `src/jarspect/api/routes/ui.py` - root index route + static asset app.
+- `src/jarspect/api/main.py` - UI route registration and `/static` mount.
+- `src/jarspect/api/routes/__init__.py` - route exports include UI router.
 
 ## Decisions Made
 

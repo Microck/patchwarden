@@ -18,13 +18,13 @@ key-files:
   created:
     [
       ".env.example",
-      "src/mod_sentinel/storage/base.py",
-      "src/mod_sentinel/storage/local.py",
-      "src/mod_sentinel/storage/azure_blob.py",
-      "src/mod_sentinel/api/routes/upload.py",
+      "src/jarspect/storage/base.py",
+      "src/jarspect/storage/local.py",
+      "src/jarspect/storage/azure_blob.py",
+      "src/jarspect/api/routes/upload.py",
       "tests/test_upload.py",
     ]
-  modified: ["src/mod_sentinel/storage/__init__.py", "src/mod_sentinel/api/main.py"]
+  modified: ["src/jarspect/storage/__init__.py", "src/jarspect/api/main.py"]
 key-decisions:
   - "Treat Azure Blob as optional and lazily import SDK only when backend is selected."
   - "Use deterministic `uploads/{upload_id}.jar` key format for downstream scan lookup."
@@ -62,10 +62,10 @@ completed: 2026-02-15
 ## Files Created/Modified
 
 - `.env.example` - local/azure storage defaults and placeholders
-- `src/mod_sentinel/storage/base.py` - storage contract and key normalization
-- `src/mod_sentinel/storage/local.py` - local byte persistence with traversal protection
-- `src/mod_sentinel/storage/azure_blob.py` - lazy Azure Blob adapter
-- `src/mod_sentinel/api/routes/upload.py` - multipart upload endpoint
+- `src/jarspect/storage/base.py` - storage contract and key normalization
+- `src/jarspect/storage/local.py` - local byte persistence with traversal protection
+- `src/jarspect/storage/azure_blob.py` - lazy Azure Blob adapter
+- `src/jarspect/api/routes/upload.py` - multipart upload endpoint
 - `tests/test_upload.py` - upload success and validation coverage
 
 ## Decisions Made

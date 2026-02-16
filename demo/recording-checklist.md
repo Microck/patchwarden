@@ -5,7 +5,7 @@ Use this checklist when recording the 2-minute submission video.
 ## Pre-Recording Setup
 
 - [ ] Activate project virtual environment
-- [ ] Start API server: `python3 -m uvicorn mod_sentinel.api.main:app`
+- [ ] Start API server: `python3 -m uvicorn jarspect.api.main:app`
 - [ ] Open browser at `http://localhost:8000/`
 - [ ] Open terminal in repo root
 - [ ] Keep `demo/storyboard.md` visible for timing cues

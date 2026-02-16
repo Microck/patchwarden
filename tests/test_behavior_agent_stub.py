@@ -1,8 +1,8 @@
 from __future__ import annotations
 
-from mod_sentinel.agents.behavior_agent import BehaviorAgent
-from mod_sentinel.llm.client import StubLLMClient
-from mod_sentinel.models.static import StaticFindings, StaticIndicator
+from jarspect.agents.behavior_agent import BehaviorAgent
+from jarspect.llm.client import StubLLMClient
+from jarspect.models.static import StaticFindings, StaticIndicator
 
 
 def test_behavior_agent_returns_validated_prediction_from_stub() -> None:

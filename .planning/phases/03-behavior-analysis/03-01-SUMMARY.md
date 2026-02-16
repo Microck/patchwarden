@@ -17,13 +17,13 @@ tech-stack:
 key-files:
   created:
     [
-      "src/mod_sentinel/llm/client.py",
-      "src/mod_sentinel/llm/prompts.py",
-      "src/mod_sentinel/models/behavior.py",
-      "src/mod_sentinel/agents/behavior_agent.py",
+      "src/jarspect/llm/client.py",
+      "src/jarspect/llm/prompts.py",
+      "src/jarspect/models/behavior.py",
+      "src/jarspect/agents/behavior_agent.py",
       "tests/test_behavior_agent_stub.py",
     ]
-  modified: ["src/mod_sentinel/llm/__init__.py", "src/mod_sentinel/models/__init__.py", "src/mod_sentinel/agents/__init__.py"]
+  modified: ["src/jarspect/llm/__init__.py", "src/jarspect/models/__init__.py", "src/jarspect/agents/__init__.py"]
 key-decisions:
   - "Default to deterministic StubLLMClient for local/demo reliability."
   - "Keep provider-specific request logic isolated in llm/client.py."
@@ -59,10 +59,10 @@ completed: 2026-02-15
 
 ## Files Created/Modified
 
-- `src/mod_sentinel/llm/client.py` - LLM provider abstraction and stub implementation
-- `src/mod_sentinel/llm/prompts.py` - behavior prompt builder
-- `src/mod_sentinel/models/behavior.py` - typed behavior schema
-- `src/mod_sentinel/agents/behavior_agent.py` - prediction orchestration using LLM client
+- `src/jarspect/llm/client.py` - LLM provider abstraction and stub implementation
+- `src/jarspect/llm/prompts.py` - behavior prompt builder
+- `src/jarspect/models/behavior.py` - typed behavior schema
+- `src/jarspect/agents/behavior_agent.py` - prediction orchestration using LLM client
 - `tests/test_behavior_agent_stub.py` - deterministic stub behavior test
 
 ## Decisions Made

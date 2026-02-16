@@ -18,13 +18,13 @@ key-files:
   created:
     [
       "data/signatures/signatures.json",
-      "src/mod_sentinel/signatures/store.py",
-      "src/mod_sentinel/signatures/local_json.py",
-      "src/mod_sentinel/signatures/azure_search.py",
+      "src/jarspect/signatures/store.py",
+      "src/jarspect/signatures/local_json.py",
+      "src/jarspect/signatures/azure_search.py",
       "scripts/signatures_index.py",
       "tests/test_signatures.py",
     ]
-  modified: ["src/mod_sentinel/signatures/__init__.py"]
+  modified: ["src/jarspect/signatures/__init__.py"]
 key-decisions:
   - "Keep signature corpus synthetic and non-malicious for safe sharing in demo repo."
   - "Default to local JSON store to avoid external dependencies in local test runs."
@@ -62,9 +62,9 @@ completed: 2026-02-15
 ## Files Created/Modified
 
 - `data/signatures/signatures.json` - synthetic signature corpus
-- `src/mod_sentinel/signatures/store.py` - store and match contracts
-- `src/mod_sentinel/signatures/local_json.py` - local signature matching engine
-- `src/mod_sentinel/signatures/azure_search.py` - optional Azure Search adapter
+- `src/jarspect/signatures/store.py` - store and match contracts
+- `src/jarspect/signatures/local_json.py` - local signature matching engine
+- `src/jarspect/signatures/azure_search.py` - optional Azure Search adapter
 - `scripts/signatures_index.py` - merge-or-upload indexing utility
 - `tests/test_signatures.py` - local signature matching tests
 

@@ -17,13 +17,13 @@ tech-stack:
 key-files:
   created:
     [
-      "src/mod_sentinel/models/intake.py",
-      "src/mod_sentinel/analysis/jar_extract.py",
-      "src/mod_sentinel/agents/intake_agent.py",
-      "src/mod_sentinel/api/routes/scan.py",
+      "src/jarspect/models/intake.py",
+      "src/jarspect/analysis/jar_extract.py",
+      "src/jarspect/agents/intake_agent.py",
+      "src/jarspect/api/routes/scan.py",
       "tests/test_intake.py",
     ]
-  modified: ["src/mod_sentinel/api/main.py", "src/mod_sentinel/api/routes/__init__.py"]
+  modified: ["src/jarspect/api/main.py", "src/jarspect/api/routes/__init__.py"]
 key-decisions:
   - "Inspect jars in-memory with strict path validation rather than extracting full archives."
   - "Keep /scan response scoped to intake now so later phases can extend schema incrementally."
@@ -59,10 +59,10 @@ completed: 2026-02-15
 
 ## Files Created/Modified
 
-- `src/mod_sentinel/analysis/jar_extract.py` - bounded, traversal-safe jar inspection + manifest parsing
-- `src/mod_sentinel/models/intake.py` - intake result schema
-- `src/mod_sentinel/agents/intake_agent.py` - storage-backed intake orchestration
-- `src/mod_sentinel/api/routes/scan.py` - intake scan endpoint
+- `src/jarspect/analysis/jar_extract.py` - bounded, traversal-safe jar inspection + manifest parsing
+- `src/jarspect/models/intake.py` - intake result schema
+- `src/jarspect/agents/intake_agent.py` - storage-backed intake orchestration
+- `src/jarspect/api/routes/scan.py` - intake scan endpoint
 - `tests/test_intake.py` - utility + upload/scan integration tests for fabric/forge detection
 
 ## Decisions Made

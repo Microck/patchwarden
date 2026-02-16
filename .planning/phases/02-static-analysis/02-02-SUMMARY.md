@@ -17,12 +17,12 @@ tech-stack:
 key-files:
   created:
     [
-      "src/mod_sentinel/analysis/patterns.py",
-      "src/mod_sentinel/analysis/static_scan.py",
-      "src/mod_sentinel/models/static.py",
+      "src/jarspect/analysis/patterns.py",
+      "src/jarspect/analysis/static_scan.py",
+      "src/jarspect/models/static.py",
       "tests/test_patterns.py",
     ]
-  modified: ["src/mod_sentinel/analysis/__init__.py", "src/mod_sentinel/models/__init__.py"]
+  modified: ["src/jarspect/analysis/__init__.py", "src/jarspect/models/__init__.py"]
 key-decisions:
   - "Use deterministic regex rules for MVP instead of probabilistic scoring in static stage."
   - "Include evidence snippets per match to support explainable verdict output."
@@ -58,9 +58,9 @@ completed: 2026-02-15
 
 ## Files Created/Modified
 
-- `src/mod_sentinel/analysis/patterns.py` - rule catalog with stable IDs and rationale
-- `src/mod_sentinel/analysis/static_scan.py` - deterministic matcher and snippet extraction
-- `src/mod_sentinel/models/static.py` - typed static indicator and findings models
+- `src/jarspect/analysis/patterns.py` - rule catalog with stable IDs and rationale
+- `src/jarspect/analysis/static_scan.py` - deterministic matcher and snippet extraction
+- `src/jarspect/models/static.py` - typed static indicator and findings models
 - `tests/test_patterns.py` - catalog size and multi-category detection tests
 
 ## Decisions Made

@@ -23,11 +23,11 @@ tech-stack:
 key-files:
   created:
     [
-      "src/mod_sentinel/models/verdict.py",
-      "src/mod_sentinel/agents/verdict_agent.py",
+      "src/jarspect/models/verdict.py",
+      "src/jarspect/agents/verdict_agent.py",
       "tests/test_verdict.py",
     ]
-  modified: ["src/mod_sentinel/models/__init__.py", "src/mod_sentinel/agents/__init__.py"]
+  modified: ["src/jarspect/models/__init__.py", "src/jarspect/agents/__init__.py"]
 key-decisions:
   - "Keep verdict synthesis deterministic (no LLM) to preserve repeatable demo and test outcomes."
   - "Score by explicit weighted contributors and expose indicator evidence in explanation text."
@@ -64,11 +64,11 @@ completed: 2026-02-15
 
 ## Files Created/Modified
 
-- `src/mod_sentinel/models/verdict.py` - verdict and indicator model schema.
-- `src/mod_sentinel/agents/verdict_agent.py` - deterministic synthesis and scoring logic.
+- `src/jarspect/models/verdict.py` - verdict and indicator model schema.
+- `src/jarspect/agents/verdict_agent.py` - deterministic synthesis and scoring logic.
 - `tests/test_verdict.py` - tier coverage and behavior-driven verdict scenarios.
-- `src/mod_sentinel/models/__init__.py` - export verdict models.
-- `src/mod_sentinel/agents/__init__.py` - export VerdictAgent.
+- `src/jarspect/models/__init__.py` - export verdict models.
+- `src/jarspect/agents/__init__.py` - export VerdictAgent.
 
 ## Decisions Made
 
