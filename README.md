@@ -1,15 +1,24 @@
 # Jarspect
 
-Jarspect is a multi-agent security scanner for Minecraft mods (`.jar`) that helps players and communities detect suspicious behavior before installation.
+[![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
 
-Built for: Microsoft AI Dev Days Hackathon 2026
-Categories: AI Apps and Agents, Best Enterprise Solution
-Demo video: <paste hosted link>
+Jarspect is a security scanner for Minecraft mods (`.jar`) that flags suspicious behavior before installation.
 
-## Quickstart
+It combines deterministic static analysis and fixture-backed reputation scoring, plus a final verdict synthesis that produces a risk tier, score, and explainable indicators.
+
+## Features
+
+- Upload + scan pipeline with persisted results (`scan_id`)
+- Deterministic demo fixtures (no real malware)
+- Web UI for upload and verdict review
+- API docs via OpenAPI UI (`/docs`)
+
+## Installation
 
 Prereqs:
 - Rust (stable toolchain)
+
+## Quick Start
 
 1. Run the API + web UI:
 
@@ -18,59 +27,41 @@ cargo run
 ```
 
 2. Open:
-- `http://localhost:8000/` for upload + verdict UI
-- `http://localhost:8000/docs` for API docs
+- `http://localhost:8000/` (UI)
+- `http://localhost:8000/docs` (API docs)
 
-3. Run the demo script (in another terminal, with the server still running):
+3. Run the scripted demo (with the server running):
 
 ```bash
 bash scripts/demo_run.sh
 ```
 
-Expected: prints `scan_id`, `risk_tier`, `risk_score`, and top indicators.
+## Usage
 
-## What It Does
-
-Jarspect combines deterministic static analysis, YARA-X signature matching, behavior prediction, author reputation scoring, and verdict synthesis.
-
-Pipeline:
-
-```text
-Upload (.jar)
-  -> Intake Agent (loader + manifest inspection)
-  -> Static Agent (archive inspection + heuristics + YARA-X signature matches)
-  -> Behavior Agent (predicted file/network/persistence behavior)
-  -> Reputation Agent (optional author metadata + fixture history)
-  -> Verdict Agent (risk tier + score + explanation + indicators)
-  -> Persisted Scan Result (scan_id; GET /scans/{scan_id})
-```
-
-## API Surface (Minimal)
+Minimal API surface:
 
 - `POST /upload` (multipart file upload)
 - `POST /scan` (scan an upload_id + metadata)
 - `GET /scans/{scan_id}` (fetch persisted results)
 
-Interactive docs: `http://localhost:8000/docs`
+## Safety
 
-## Verification
+This repo includes synthetic demo fixtures only:
+
+- `demo/samples/suspicious_mod_src/` is intentionally benign source code.
+- `demo/suspicious_sample.jar` is generated locally for demonstrations.
+- No real malware samples are downloaded, bundled, or distributed.
+
+## Testing
 
 ```bash
 cargo check
 cargo test
 ```
 
-## Safety Note
+## Contributing
 
-Jarspect includes synthetic demo fixtures only.
-
-- `demo/samples/suspicious_mod_src/` is intentionally benign source code.
-- `demo/suspicious_sample.jar` is generated locally for demonstrations.
-- No real malware samples are downloaded, bundled, or distributed.
-
-## Demo Recording
-
-Follow `demo/recording-checklist.md`.
+Issues and pull requests are welcome.
 
 ## License
 
