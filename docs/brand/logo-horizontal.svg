@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 256" width="900" height="256">
+  <g>
+    <path fill="#0d1117" d="M64 40h96l32 32v144H64z"/>
+    <path fill="#0d1117" d="M160 40v32h32z"/>
+    <path fill="#00d9a5" d="M80 132h112v12H80z"/>
+    <path fill="#0d1117" d="M92 92h56v10H92z"/>
+    <path fill="#0d1117" d="M92 112h72v10H92z"/>
+    <path fill="#0d1117" d="M92 162h72v10H92z"/>
+    <path fill="#0d1117" d="M92 182h56v10H92z"/>
+  </g>
+  <text x="240" y="162" fill="#0d1117" font-size="96" font-weight="700" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial">
+    Jarspect
+  </text>
+</svg>
