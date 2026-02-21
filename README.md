@@ -1,7 +1,4 @@
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/brand/logo-horizontal-dark.svg">
-  <img alt="Jarspect" src="docs/brand/logo-horizontal.svg" width="640">
-</picture>
+<img alt="Jarspect" src="docs/brand/logo-horizontal.svg" width="640">
 
 # Jarspect
 
